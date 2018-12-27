@@ -1,0 +1,4 @@
+puppet resource group mattermost ensure=present gid=2000
+puppet resource user mattermost ensure=present gid=2000 uid=2000
+mkdir -p ./volumes/app/mattermost/{data,logs,config,plugins}
+chown -R 2000:2000 ./volumes/app/mattermost/
